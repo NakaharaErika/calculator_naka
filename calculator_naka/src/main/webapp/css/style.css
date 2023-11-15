@@ -1,0 +1,74 @@
+body {
+    background-color: #1C1C1C;
+    color: white;
+    font-family: Arial, sans-serif; /* iphoneっぽいフォントらしい */
+}
+
+.grid{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="text"] {
+    background-color: #333; 
+    color: white; 
+    border: none;
+    width: 300px;
+    text-align: right; 
+}
+
+.sideInput {
+	text-align: right;
+}
+
+.sideInput input{
+	width:60px;
+	font-size:15px;
+	background-color: #1C1C1C; 
+}
+
+#display {
+    font-size: 40px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #333; 
+    color: white; 
+    border: none;
+}
+#operation {
+	text-align: left;
+}
+
+button {
+    background-color: #333; 
+    color: white; 
+    border: none;
+    margin: 5px;
+    font-size: 24px;
+    width: 75px; 
+    height: 75px; 
+    border-radius: 50%;
+}
+
+/* オレンジ色のボタンスタイル */
+button.orange {
+    background-color: #FF9500; 
+}
+
+/* グレーのボタンスタイル */
+button.gray {
+    background-color: rgb(207, 208, 214); 
+    color: #1C1C1C;
+}
+
+/* アクティブ時のスタイル */
+button:active, button.orange:active,button.gray:active {
+    background-color: #444; 
+}
+
