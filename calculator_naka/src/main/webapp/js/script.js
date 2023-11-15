@@ -46,3 +46,18 @@ function clearDisplay() {
     document.getElementById("previousValue").value = '';
     document.getElementById('equalPressed').value = '';
 }
+
+
+// 文字数制限
+function truncateInput(inputElement) {
+    if(inputElement.value.length > 5) {
+        inputElement.value = inputElement.value.substring(0, 5);
+    }
+}
+
+// 関数を利用して特定のinput要素を監視
+document.addEventListener('DOMContentLoaded', (event) => {
+    // 例えば、サーバーから値が設定された後に以下の関数を呼び出します
+    truncateInput(document.getElementById('display'));
+    // 他のinput要素に対しても同様に適用
+});
