@@ -5,6 +5,13 @@ function addValue(value) {
     } else if ((value === '0'||value ==='00') && display.value === ('')) {
 		return;
 	}
+	//イコールフラグが立っている時は、値をクリアして入力。イコールフラグも元に戻す
+	if (document.getElementById('equalPressed').value === "true"){
+			document.getElementById("display").value = value;
+			document.getElementById("equalPressed").value = "";
+			console.log("たてたよ")
+		return;
+	}
     document.getElementById("display").value += value;
 }
 
@@ -13,26 +20,26 @@ function sendCalculation() {
 	if (document.getElementById('operation').value === ''||document.getElementById('display').value === ''){
 		return;
 	}else{
-    document.getElementById('equalPressed').value = "true"; // イコール演算子フラグをtrue
+		// イコール演算子フラグをtrueにして計算開始
+    document.getElementById('equalPressed').value = "true"; 
     document.getElementById('form').submit();
     }
 }
 
 function setOperation(operation) {
-	// すでに演算子欄に値がある場合はフォームを送信
+	// すでに演算子欄に値がある場合は、隠し演算子欄に直近の演算子を入れて計算開始
     if(document.getElementById('operation').value != ''){
 		document.getElementById('subOperation').value = operation;
     	document.getElementById('form').submit();
     } else {
+	// そうでない場合は、演算子欄と直近値欄に値を転記する
     document.getElementById('operation').value = operation;
     document.getElementById('previousValue').value = document.getElementById('display').value;
     document.getElementById("display").value = '';
     }
-    
-    console.log(operation);
 }
 
-
+//Cボタン
 function clearDisplay() {
     document.getElementById("display").value = '';
     document.getElementById("operation").value = '';

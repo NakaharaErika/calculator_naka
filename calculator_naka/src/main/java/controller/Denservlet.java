@@ -8,14 +8,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
-
 @WebServlet("/calcu")
 public class Denservlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//隠し演算子欄と入力値欄と直近値欄をクリア
 		request.setAttribute("nextOperation", "");
 		request.setAttribute("result", "");
 		request.setAttribute("resultFinal", "");
+		request.setAttribute("equalPressed", "");
 		
 		String view = "/WEB-INF/views/calcu.jsp";
         request.getRequestDispatcher(view).forward(request, response);
@@ -23,28 +23,29 @@ public class Denservlet extends HttpServlet {
 	
 	@Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String previousValue = request.getParameter("previousValue");
-        String currentValue = request.getParameter("currentValue");
-        String operation = request.getParameter("operation");
-        String subOperation = request.getParameter("subOperation");
-        String equalPressed = request.getParameter("equalPressed");
+        String previousValue = request.getParameter("previousValue");//直近値
+        String currentValue = request.getParameter("currentValue");//入力値
+        String operation = request.getParameter("operation");//演算子
+        String subOperation = request.getParameter("subOperation");//隠し演算子
+        String equalPressed = request.getParameter("equalPressed");//イコールフラグ
         
         String result = "";
         
         try {
-            double prevVal = Double.parseDouble(previousValue);
-            double currVal = Double.parseDouble(currentValue);
-            result = performOperation(prevVal, currVal, operation);
-            request.setAttribute("nextOperation", subOperation);
+            double prevVal = Double.parseDouble(previousValue);//String型から変換
+            double currVal = Double.parseDouble(currentValue);//String型から変換
+            result = performOperation(prevVal, currVal, operation);//直近値と入力値と演算子を渡して計算
+            request.setAttribute("nextOperation", subOperation);//隠し演算子欄に入力した演算子を入れるに入れる
         } catch (Exception e) {
             result = "エラー";
         }
         
-        if ("true".equals(equalPressed)) {
-            request.setAttribute("resultFinal", result);
+        if ("true".equals(equalPressed)) {//イコールボタンを押した時か、演算子ボタンを押した時かで、結果値を入れる場所を変える
+            request.setAttribute("resultFinal", result);//イコールフラグが立っている時は、結果を入力値欄にでかでかと表示
             request.setAttribute("result", "");
+            request.setAttribute("equalPressed", "true");//イコールフラグを立てっぱなしにしておいて、上書きを防ぐ
         } else {
-            request.setAttribute("result", result);
+            request.setAttribute("result", result);//結果値欄に表示
             request.setAttribute("resultFinal", "");
         }
 
@@ -69,7 +70,7 @@ public class Denservlet extends HttpServlet {
                 result = prevVal / currVal;
                 break;
             default:
-                return "無効な演算";
+                return "変なことしないでね";
         }
 
         if (result == (long) result) {

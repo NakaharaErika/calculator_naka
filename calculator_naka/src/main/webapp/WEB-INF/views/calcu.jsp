@@ -23,7 +23,7 @@
 		<br>
         <button type="button" class="gray" onclick="clearDisplay()">C</button>
         <button type="button" class="gray">控		    </button>
-        <button type="button" class="gray">% 		    </button>
+        <button type="button" class="gray">控		    </button>
         <button type="button" class="orange" onclick="setOperation('/')">/</button><br>
         
 		<button type="button" onclick="addValue('7')">7</button>
@@ -50,8 +50,8 @@
 		<button type="button" class="orange" onclick="sendCalculation()">=</button>
 		<br>
 		<!-- 隠し要素 -->
-		<input type="text" id="subOperation" name="subOperation" size="1" readonly><br>
-		<input type="text" id="equalPressed" name="equalPressed" value="" size="1" readonly>
+		<input type="text" id="subOperation" name="subOperation" readonly><br>
+		<input type="text" id="equalPressed" name="equalPressed" value="<%= (String)request.getAttribute("equalPressed")%>" eadonly>
      
 	</form>
 	</div>
