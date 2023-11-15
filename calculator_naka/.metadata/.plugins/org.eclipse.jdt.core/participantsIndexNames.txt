@@ -1,0 +1,23 @@
+INDEX VERSION 1.134
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2080543714.index
+/kogi_3/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/52173221.index
+/janken_naka/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/664366202.index
+/sodatec/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2221659032.index
+/kogi_3/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2683148574.index
+/sodatec_homework/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3358133760.index
+/jankenponGame/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3512007053.index
+/kogi_3/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3998544774.index
+/kogi_3/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4049115008.index
+/kogi_3/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2855105305.index
+/janken_game/src/main/java
+/Users/nakahara.erika/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/929709634.index
+/sodatec_app/src/main/java

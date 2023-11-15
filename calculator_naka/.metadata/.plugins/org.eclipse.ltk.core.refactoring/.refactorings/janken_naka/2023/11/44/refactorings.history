@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;views&apos; to &apos;WEB-INF&apos;&#x0A;- 元のプロジェクト: &apos;janken_naka&apos;&#x0A;- 宛先要素: &apos;WEB-INF&apos;&#x0A;- オリジナル要素: &apos;views&apos;&#x0A;- リファクタリングされた要素の参照を更新" description="フォルダーを移動" element1="views" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1699016502833" target="src/main/webapp/WEB-INF" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,21 @@
+package service;
+
+import java.util.List;
+
+import dao.DBWorkDaoJDBC;
+import entity.DBWork;
+
+public class DBWorkService {
+
+	DBWorkDaoJDBC dao = new DBWorkDaoJDBC();
+
+	/**
+	 * DBWork を全件取得します
+	 *
+	 * @return DBWorkリスト
+	 */
+	public List<DBWork> findAll() {
+		return dao.findAll();
+	}
+
+}
